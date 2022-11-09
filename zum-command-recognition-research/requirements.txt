@@ -1,0 +1,9 @@
+ipykernel
+https://github.com/huggingface/transformers/archive/refs/heads/master.zip
+https://github.com/speechbrain/speechbrain/
+jiwer
+torch
+torchaudio
+librosa
+ffmpeg
+matplotlib

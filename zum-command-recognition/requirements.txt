@@ -1,0 +1,5 @@
+https://github.com/speechbrain/speechbrain/
+torch
+torchaudio
+librosa
+ffmpeg
