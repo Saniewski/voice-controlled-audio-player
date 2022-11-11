@@ -1,4 +1,4 @@
-selenium
-webdriver-manager
 packaging
 pika
+selenium
+webdriver-manager
