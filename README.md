@@ -1,4 +1,3 @@
-
 # Voice-controlled Audio Player
 A simple voice user interface for controlling playback of an audio player web app.
 
@@ -22,10 +21,10 @@ An audio player web app was built entirely by [Mark Hillard - https://codepen.io
 The only part that was added by me is `main.py` for locally hosting the web page.
 
 ## Voice Controller
-This part of the project is responsible for connecting to the audio player using Selenium and providing a way to control the playback.
+This part of the project is responsible for connecting to the audio player using Selenium and providing a way to control the playback. The module listens for messages in the queue and executes the corresponding command when message arrives.
 
-## Command Recognition
-The core module of the project, where the user's voice is recognized and converted to text, and then matched to the list of supported commands. When a match is found, the corresponding command is executed using the `Voice Controller` module.
+## Command Interpreter
+The core module of the project, where the user's voice is recognized, converted to text, and then matched to the list of supported commands. When a match is found, the corresponding command is pushed to the message queue, which then will be retrieved and executed by the `Voice Controller` module.
 
 ## Command Recognition Research
 This part was used only for exploring the libraries. It is not used in the final project, but files are provided for reference.

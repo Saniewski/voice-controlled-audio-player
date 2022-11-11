@@ -4,3 +4,8 @@ torchaudio
 librosa
 ffmpeg
 sounddevice
+pika
+matplotlib
+wave
+scipy
+pyaudio

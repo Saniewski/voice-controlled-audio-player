@@ -2,7 +2,7 @@ from player_controls import PlayerControls
 import time
 import subprocess
 
-command = 'python3 -m http.server --directory ../zum-audio-player'
+command = 'python3 -m http.server --directory ../../zum-audio-player/src 80'
 
 http_server = subprocess.Popen(command.split(' '))
 
@@ -10,6 +10,14 @@ time.sleep(5)
 
 player = PlayerControls()
 player.open_player()
+
+time.sleep(5)
+
+player.set_command_mode()
+
+time.sleep(5)
+
+player.unset_command_mode()
 
 time.sleep(5)
 
