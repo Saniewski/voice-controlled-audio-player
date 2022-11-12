@@ -16,7 +16,19 @@ The following commands are supported:
 To command the app, start by saying `Hey, player!` followed by one of the commands listed above.
 
 ## Requirements
-TODO
+The following are required to run the app:
+
+- HTML5 support (for `<audio>` tag)
+- `portaudio.h` library (for Python's `PyAudio` library. For a detailed instruction, refer to the [PyPi PyAudio documentation](https://pypi.org/project/PyAudio/))
+- Python 3.9 or above
+- either one of the below for installing Python dependencies:
+  - [`pip`](https://pypi.org/project/pip/)
+  - [`pipenv`](https://pipenv.pypa.io/en/latest/)
+  - [`conda`](https://conda.io/)
+  - [`virtualenv`](https://docs.python.org/3/tutorial/venv.html)
+- either one of the below for running infrastructure:
+  - [Docker](https://www.docker.com/) with [Compose](https://docs.docker.com/compose/)
+  - [RabbitMQ](https://www.rabbitmq.com/) (local/remote installation might require updates to the `zum-command-interpreter` and/or `zum-voice-controller`)
 
 ## Installation
 ### 1. Clone the repository
@@ -28,11 +40,19 @@ git clone git@github.com:Saniewski/voice-controlled-audio-player.git
 ```bash
 git clone https://github.com/Saniewski/voice-controlled-audio-player.git
 ```
-### 2. Run the infrastructure and website with Docker Compose
+### 2. Run the infrastructure and website
+#### 2.1. Using Compose
 ```bash
 cd voice-controlled-audio-player
 docker compose up -d --build
 ```
+
+#### 2.2. Using local/remote installation of RabbitMQ
+```bash
+cd voice-controlled-audio-player/zum-audio-player/src
+python -m http.server 80
+```
+
 ### 3. Run the Voice Controller
 ```bash
 cd zum-voice-controller
