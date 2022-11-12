@@ -1,7 +1,5 @@
 services:
 
-  ### INFRASTRUCTURE
-
   rabbitmq:
     image: rabbitmq:3.9-management
     restart: unless-stopped
@@ -13,8 +11,6 @@ services:
     volumes:
       - ./data/rabbitmq:/var/lib/rabbitmq
   
-  ### SERVICES
-
   audio-player:
     build:
       context: ./zum-audio-player
@@ -25,28 +21,6 @@ services:
     networks:
       - zum
   
-  # voice-controller:
-  #   build:
-  #     context: ./zum-voice-controller
-  #     dockerfile: Dockerfile
-  #   restart: unless-stopped
-  #   depends_on:
-  #     - audio-player
-  #     - rabbitmq
-  #   networks:
-  #     - zum
-    
-  # command-recognition:
-  #   build:
-  #     context: ./zum-command-recognition
-  #     dockerfile: Dockerfile
-  #   restart: unless-stopped
-  #   depends_on:
-  #     - voice-controller
-  #   networks:
-  #     - zum
-
-
 networks:
   zum:
     name: zum-network

@@ -1,7 +1,5 @@
 from utils import get_logger
 import os, pika, pyaudio, threading, wave
-# import matplotlib.pyplot as plt
-# import numpy as np
 from speechbrain.pretrained import EncoderDecoderASR
 from thefuzz import fuzz
 

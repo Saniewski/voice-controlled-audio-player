@@ -1,5 +1,4 @@
 git+https://github.com/speechbrain/speechbrain@main#egg=speechbrain
-matplotlib
 pika
 pyaudio
 thefuzz[speedup]
